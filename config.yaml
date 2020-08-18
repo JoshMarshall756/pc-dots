@@ -1,0 +1,28 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_vimrc:
+    src: vimrc
+    dst: ~/.vimrc
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
+  f_xresources:
+    src: Xresources
+    dst: ~/.Xresources
+  f_xinitrc:
+    src: xinitrc
+    dst: ~/.xinitrc
+profiles:
+  joshpc:
+    dotfiles:
+    - f_vimrc
+    - f_bashrc
+    - f_config
+    - f_xresources
+    - f_xinitrc
