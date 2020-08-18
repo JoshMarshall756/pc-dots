@@ -1,0 +1,23 @@
+!! URxvt Appearance
+!! ----- Font -----
+URxvt.font: xft:SourceCodePro-Regular:style=Regular:size=11
+URxvt.boldFont: xft:SourceCodePro-Bold:style=Bold:size=11
+URxvt.italicFont: xft:SourceCodePro-It:style=Italic:size=11
+URxvt.boldItalicFont: xft:SourceCodePro-BoldIt:style=Bold Italic:size=11
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.cursorBlink: true
+URxvt.transparent: true
+URxvt.shading: true
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+
+!! ----- Common Keybinds -----
+URxvt.keysym.Control-Right: \-33[1;5c
+URxvt.keysym.Control-Left: \033[1;5d
+
+!! ----- Clickable URLs -----
+URxvt.perl-lib: /usr/lib/urxvt/perl/
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1

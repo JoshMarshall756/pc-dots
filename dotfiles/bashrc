@@ -1,0 +1,21 @@
+#
+# ~/.bashrc
+#
+
+# ---------- Completion ----------
+. ~/.config/completion/git-prompt.sh
+. ~/.config/completion/dotdrop.sh-completion.bash
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+# ---------- Aliases ----------
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias g='git'
+
+alias dotdrop='~/dots/dotdrop.sh --cfg=~/dots/config.yaml' 
