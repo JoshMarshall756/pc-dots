@@ -24,6 +24,8 @@
 	# exit i3 (logs you out of your X session)
 	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+	bindsym $mod+shift+x exec i3lock -ft -i ~/.config/wallpapers/cthulu-wallpaper.png
+
 # ---------- Program Bindings ----------
 	# The combination of xss-lock, nm-applet and pactl is a popular choice, so
 	# they are included here as an example. Modify as you see fit.
