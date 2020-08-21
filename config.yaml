@@ -18,6 +18,21 @@ dotfiles:
   f_xinitrc:
     src: xinitrc
     dst: ~/.xinitrc
+  f_polybar_config:
+    src: config/polybar/config
+    dst: ~/.config/polybar/config
+  f_launch.sh:
+    src: config/polybar/launch.sh
+    dst: ~/.config/polybar/launch.sh
+  f_openweathermap-fullfeatured.sh:
+    src: config/polybar/scripts/openweathermap-fullfeatured.sh
+    dst: ~/.config/polybar/scripts/openweathermap-fullfeatured.sh
+  f_spotify_status.py:
+    src: config/polybar/scripts/spotify_status.py
+    dst: ~/.config/polybar/scripts/spotify_status.py
+  f_updates-pacman-aurhelper.sh:
+    src: config/polybar/scripts/updates-pacman-aurhelper.sh
+    dst: ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
 profiles:
   joshpc:
     dotfiles:
@@ -26,3 +41,8 @@ profiles:
     - f_config
     - f_xresources
     - f_xinitrc
+    - f_polybar_config
+    - f_launch.sh
+    - f_openweathermap-fullfeatured.sh
+    - f_spotify_status.py
+    - f_updates-pacman-aurhelper.sh
