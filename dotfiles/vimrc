@@ -1,3 +1,101 @@
+"show numbers in margin
 set relativenumber
 
+"syntax highlighting 
 syntax on
+
+"better cli completion 
+set wildmenu
+
+"try and determine the type of a file by its name and possibly its contents
+filetype indent plugin on
+
+"show partial commands in the last line of the screen
+set showcmd
+
+"highlight searches
+set hlsearch
+
+"when opening new line and no filetype-specific indenting is enabled, stay at
+"the same level of indent
+set autoindent
+
+
+"set tabstops and shiftwidth to 4 spaces, instead of default 8
+set ts=4
+set sw=4
+
+"always show location in file
+set ruler
+
+"Autotabs for certain code
+set smarttab
+
+"vim spellchecker
+"set spell
+
+"set update intervals 100ms
+set updatetime=100
+
+"---------- Plugins ----------
+call plug#begin('~/.vim/plugged')
+
+Plug 'airblade/vim-gitgutter'
+Plug 'mattn/emmet-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'lervag/vimtex'
+Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'ap/vim-css-color' 
+Plug 'dylanaraps/wal.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+call plug#end()
+
+"---------- Status Line ----------
+"always display the status line (shows lightline)
+set laststatus=2
+let g:lightline = {
+	\ 'colorscheme': 'jellybeans',
+	\ 'active': {
+	\ 'left': [ [ 'mode', 'paste' ],
+	\	[ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+	\ },
+	\ 'component_function': {
+	\	'gitbranch': 'fugitive#head'
+	\ },
+	\ }
+
+"remove the --INSERT-- etc as lightline does that for us now
+set noshowmode
+
+"colorscheme from wal
+colorscheme wal
+
+"---------- Vimtex ----------
+"prevent, uncommon, .tex extension being mistaken for plaintex
+let g:tex_flavor = 'latex'
+
+"---------- Syntastic ----------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"---------- Key Mappings ----------
+"map NERDTree to Ctrl-n
+map <C-n> :NERDTreeToggle<CR>
+"auto open NERDTree when vim starts up
+"autocmd vimenter * NERDTree
+"close vim if only window left open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"map fzf to ';'
+map ; :Files<CR>
