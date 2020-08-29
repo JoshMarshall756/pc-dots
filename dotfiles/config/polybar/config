@@ -61,7 +61,7 @@ font-3 = CaskaydiaCove Nerd Font Mono:style=Book:size=16;3
 font-4 = CaskaydiaCove Nerd Font:style=Book:size=16;3
 font-5 = Weather Icons:size=11;1
 
-modules-left = i3
+modules-left = i3 i3-mode
 modules-center = xwindow
 modules-right = pulseaudio openweathermap-fullfeatured date powermenu
 
@@ -84,7 +84,6 @@ format-underline = ${colors.wal-underline}
 type = internal/xwindow
 label = %title:0:30:...%
 
-
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -99,8 +98,7 @@ format-underline = ${colors.wal-underline}
 
 [module/i3]
 type = internal/i3
-; format = <label-state> <label-mode>
-format = <label-state>
+format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 fuzzy-match = true
