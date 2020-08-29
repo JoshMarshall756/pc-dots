@@ -56,8 +56,9 @@
 	# Dual monitor layout
 	exec xrandr --output HDMI-0 --primary --right-of DP-3
 
+	# Use pywal to set wallpaper and set color theme
 	exec wal -R
-#33393b
+
 	# colors
 	set $bg-color			#222222
 	set $inactive-bg-color  	#222222
@@ -75,6 +76,10 @@
 	# Hide borders and next tile
 	hide_edge_borders both
 
+	# i3-gaps config
+	for_window [class=".*"] border pixel 0
+	gaps inner 10
+	gaps outer 5
 
 	# Enable compton
 	exec picom -c -f -m 0.8
