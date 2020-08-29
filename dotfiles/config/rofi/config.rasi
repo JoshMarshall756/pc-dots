@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "SourceCodePro-Regular 12";
+	font: "RobotoMono-Regular 12";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
@@ -143,3 +143,5 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+
+/* vim:ft=css
