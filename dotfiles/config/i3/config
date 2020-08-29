@@ -82,7 +82,7 @@
 	gaps outer 5
 
 	# Enable compton
-	exec picom -c -f -m 0.8
+	exec_always picom --config /home/josh/.config/picom/picom.conf -c -f -m 0.8
 
 # ---------- Tile Manipulation ----------
 	# change focus
@@ -221,3 +221,24 @@
 		bindsym Escape mode "default"
 		bindsym $mod+r mode "default"
 	}
+
+# ---------- Screenshot ----------
+# ALL CREDIT GOES TO GAUTUM: github.com/quantumgc
+
+# Take a screenshot
+set $mode_screenshot screenshot | PrtSc - take shot, s - select area, f - select focused, [Shift+] - stay in screenshot mode
+bindsym Print mode "$mode_screenshot"
+    mode "$mode_screenshot" {
+    set $def mode "default"
+
+    bindsym Print exec "scrot -e 'mv $f ~/Pictures/screenshots'"; $def
+    bindsym s exec "sleep 0.2; scrot -sf -e 'mv $f ~/Pictures/screenshots'"; $def
+    bindsym f exec "scrot -u -e 'mv $f ~/Pictures/screenshots'"; $def
+
+    bindsym Shift+Print exec "scrot -e 'mv $f ~/Pictures/screenshots'"
+    bindsym Shift+s exec "sleep 0.2; scrot -sf -e 'mv $f ~/Pictures/screenshots'"
+    bindsym Shift+f exec "scrot -u -e 'mv $f ~/Pictures/screenshots'"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
