@@ -9,9 +9,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-
-
+# pywal theme
 (cat ~/.cache/wal/sequences &)
 
 # ---------- Bash Prompt  ----------
@@ -65,11 +63,35 @@ function parse_git_dirty {
 #export PS1="\u@\h:\W\`parse_git_branch\`\\$ "
 export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[32m\]:\[\e[m\]\[\e[32m\]\W\[\e[m\]\[\e[36m\]\`parse_git_branch\`\[\e[m\]\[\e[32m\]\\$\[\e[m\] "
 
+ex ()
+{
+	if [ -f $1 ]; then
+		case $1 in
+			*.tar.bz2)  tar xjf $1  ;;
+			*.tar.gz)   tar xzf $!  ;;
+			*.bz2)      bunzip2 $1  ;;
+			*.rar)      unrar x $1  ;;
+			*.gz)       gunzip $1   ;;
+			*.tar)      tar xf $1   ;;
+			*.tbz2)     tar xjf $1  ;;
+			*.tgz)      tar xzf $1  ;;
+			*.zip)      unzip $1    ;;
+			*.Z)        uncompress $1 ;;
+			*.7z)       7z x $1     ;;
+			*.deb)      ar x $1     ;;
+			*.tar.xz)   tar xf $1   ;;
+			*.tar.zst)  unzstd $1   ;;
+			*)          echo "'$1' cannot be extracted via ex()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
+
 # ---------- Aliases ----------
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias g='git'
 alias c='clear'
 alias lsl='ls -l'
 alias lsa='ls -a'
@@ -82,9 +104,26 @@ alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias dotdrop='~/dots/dotdrop.sh --cfg=~/dots/config.yaml' 
 
+alias ls='ls --color=auto'
+
+# confirm before overwriting
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# git
+alias g='git'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias fetch='git fetch'
+alias status='git status'
+alias glog='git log --graph --decorate --oneline'
+
 # ---------- Command Options  ----------
 # set vim as default editor
 export EDITOR=vim
 
 # PATH exports
 export PATH="${PATH}:{HOME}/.local/bin"
+export LD_LIBRARY_PATH=/usr/lib64
