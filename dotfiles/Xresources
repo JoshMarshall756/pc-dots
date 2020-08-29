@@ -1,9 +1,9 @@
 !! URxvt Appearance
 !! ----- Font -----
-URxvt.font: xft:SourceCodePro-Regular:style=Regular:size=11,xft:CaskaydiaCove Nerd Font Mono:style=Book:size=14;
-URxvt.boldFont: xft:SourceCodePro-Bold:style=Bold:size=11
-URxvt.italicFont: xft:SourceCodePro-It:style=Italic:size=11
-URxvt.boldItalicFont: xft:SourceCodePro-BoldIt:style=Bold Italic:size=11
+URxvt.font: xft:RobotoMono-Regular:style=Regular:size=11:antialias=true,xft:CaskaydiaCove Nerd Font Mono:style=Book:size=14:antialias=true;
+URxvt.boldFont: xft:RobotoMono-Bold:style=Bold:size=11:antialias=true
+URxvt.italicFont: xft:RobotoMono-Bold:style=Italic:size=11:antialias=true
+URxvt.boldItalicFont: xft:RobotoMono-Bold:style=Bold Italic:size=11:antialias=true
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.cursorBlink: true
