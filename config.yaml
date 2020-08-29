@@ -36,6 +36,9 @@ dotfiles:
   f_config.rasi:
     src: config/rofi/config.rasi
     dst: ~/.config/rofi/config.rasi
+  f_picom.conf:
+    src: config/picom/picom.conf
+    dst: ~/.config/picom/picom.conf
 profiles:
   joshpc:
     dotfiles:
@@ -50,3 +53,4 @@ profiles:
     - f_spotify_status.py
     - f_updates-pacman-aurhelper.sh
     - f_config.rasi
+    - f_picom.conf
