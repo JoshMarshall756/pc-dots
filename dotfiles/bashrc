@@ -98,6 +98,7 @@ alias lsa='ls -a'
 
 # common dirs
 alias dev='cd ~/dev'
+alias uni='cd ~/uni/year2'
 
 # program aliases
 alias vimrc='vim ~/.vimrc'
@@ -109,7 +110,7 @@ alias ls='ls --color=auto'
 # confirm before overwriting
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -i'
+#alias rm='rm -i'
 
 # git
 alias g='git'
