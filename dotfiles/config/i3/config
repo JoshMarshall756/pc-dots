@@ -54,7 +54,7 @@
 	#font pango:DejaVu Sans Mono 11 
 	
 	# Dual monitor layout
-	exec xrandr --output HDMI-0 --primary --right-of DP-3
+	exec xrandr --output HDMI-0 --primary --right-of DP-5
 
 	# Use pywal to set wallpaper and set color theme
 	exec wal -R
