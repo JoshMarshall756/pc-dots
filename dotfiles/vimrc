@@ -93,7 +93,7 @@ let g:Tex_IgnoredWarnings =
   \'Missing number, treated as zero.'."\n".
   \'There were undefined references'."\n".
   \'Citation %.%# undefined'."\n".
-  \'Double space found.'."\n"
+  \'Double space found'."\n"
 let g:Tex_IgnoreLevel = 8
 
 "---------- Syntastic ----------
@@ -105,6 +105,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"---------- NerdTree ----------
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = 'v'
 
 "---------- Key Mappings ----------
 "map NERDTree to Ctrl-n
