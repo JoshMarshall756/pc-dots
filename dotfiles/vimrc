@@ -44,7 +44,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'vim-syntastic/syntastic'
@@ -53,6 +53,7 @@ Plug 'ap/vim-css-color'
 Plug 'dylanaraps/wal.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'pangloss/vim-javascript'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
