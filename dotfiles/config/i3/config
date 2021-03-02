@@ -164,6 +164,7 @@
 	# per program settings
 	assign [class="code-oss"] $ws1
 	assign [class="jetbrains-idea"] $ws1
+	assign [class="jetbrains-studio"] $ws1
 	assign [class="firefox"] $ws3
 	assign [class="TeamSpeak 3"] $ws4
 	assign [class="Microsoft Teams - Preview"] $ws4
